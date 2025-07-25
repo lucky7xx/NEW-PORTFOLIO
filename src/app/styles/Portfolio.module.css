@@ -1,0 +1,160 @@
+/* styles/Portfolio.module.css */
+
+.container {
+
+  margin: 0 auto;
+  padding: 0 60px;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background-color: #f8f9fa;
+  color: #000;
+  line-height: 1.2;
+  min-height: 100vh;
+}
+
+.header {
+  background-color:  #f8f9fa;
+  padding: 20px 0;
+  margin: 0 -20px;
+}
+
+.nav {
+  display: flex;
+  gap: 40px;
+  padding: 0 20px;
+}
+
+.navLink {
+  color: #666;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.navLink:hover {
+  color: #000;
+}
+
+.navLink.active {
+  color: #000;
+  font-weight: 500;
+}
+
+.mainContent {
+  padding: 80px 0;
+  min-height: calc(100vh - 140px);
+  display: flex;
+  align-items: center;
+}
+
+.heroSection {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  width: 100%;
+}
+
+.textContent {
+  flex: 1;
+}
+
+.heroTitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(3rem, 8vw, 8rem);
+  font-weight: 900;
+  line-height: 0.9;
+  margin-bottom: 0;
+  letter-spacing: -0.02em;
+}
+
+.profileImageWrapper {
+  flex-shrink: 0;
+}
+
+.profileImage {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
+.header {
+ background-color: #f8f9fa;
+ padding: 20px 0;
+ margin: 0 -60px;
+}
+
+.nav {
+ display: flex;
+ gap: 40px;
+ padding: 0 60px;
+ justify-content: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+ .container {
+   padding: 0 20px;
+ }
+ 
+ .header {
+   margin: 0 -20px;
+ }
+ 
+ .nav {
+   padding: 0 20px;
+   justify-content: center;
+   gap: 15px;
+ }
+ 
+ .heroSection {
+   flex-direction: column;
+   text-align: center;
+   gap: 40px;
+ }
+ 
+ .heroTitle {
+   font-size: clamp(2rem, 12vw, 4rem);
+ }
+ 
+ .profileImage {
+   width: 150px;
+   height: 150px;
+ }
+ 
+ .mainContent {
+   min-height: auto;
+   padding-top: 60px;
+ }
+}
+
+@media (max-width: 480px) {
+ .container {
+   padding: 0 16px;
+ }
+ 
+ .header {
+   margin: 0 -16px;
+ }
+ 
+ .nav {
+   padding: 0 16px;
+   justify-content: center;
+   gap: 10px;
+   flex-wrap: wrap;
+ }
+ 
+ .navLink {
+   font-size: 14px;
+ }
+ 
+ .mainContent {
+   min-height: auto;
+   padding-top: 40px;
+ }
+ 
+ .heroTitle {
+   font-size: clamp(1.5rem, 15vw, 3rem);
+ }
+}
