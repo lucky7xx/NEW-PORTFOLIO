@@ -2,7 +2,7 @@
 "use client"
 import { useState } from 'react';
 import { Mail, Phone, MapPin, Linkedin, Github, Download } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import emailjs from '@emailjs/browser';
 import styles from '../styles/ContactSection.module.css';
 
@@ -11,7 +11,7 @@ export default function ContactSection() {
   const [submitStatus, setSubmitStatus] = useState('');
 
   // Animation variants
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -22,7 +22,7 @@ export default function ContactSection() {
     }
   };
 
-  const itemVariants = {
+  const itemVariants : Variants = {
     hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
@@ -34,7 +34,7 @@ export default function ContactSection() {
     }
   };
 
-  const formVariants = {
+  const formVariants: Variants = {
     hidden: { opacity: 0, x: 50 },
     visible: {
       opacity: 1,
@@ -46,7 +46,7 @@ export default function ContactSection() {
     }
   };
 
-  const contactInfoVariants = {
+  const contactInfoVariants : Variants = {
     hidden: { opacity: 0, x: -50 },
     visible: {
       opacity: 1,
@@ -58,7 +58,7 @@ export default function ContactSection() {
     }
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: { preventDefault: () => void; currentTarget: any; }) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus('');
@@ -99,7 +99,7 @@ export default function ContactSection() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true, amount: 0.3 }}
         >
-          Let's Work Together
+          Let&apos;s Work Together
         </motion.h2>
         
         <motion.div 
@@ -119,7 +119,7 @@ export default function ContactSection() {
               variants={itemVariants}
             >
               <p className={styles.leadText}>
-                Ready to build something amazing with Gen AI? I'm always open to discussing 
+                Ready to build something amazing with Gen AI? I&apos;m always open to discussing 
                 new opportunities and exciting projects.
               </p>
             </motion.div>
@@ -232,7 +232,7 @@ export default function ContactSection() {
                   required
                   whileFocus={{ scale: 1.02, transition: { duration: 0.2 } }}
                   onChange={(e) => {
-                    const replyToField = document.querySelector('input[name="reply_to"]');
+                    const replyToField = document.querySelector('input[name="reply_to"]') as HTMLInputElement | null;
                     if (replyToField) replyToField.value = e.target.value;
                   }}
                 />
@@ -291,7 +291,7 @@ export default function ContactSection() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5 }}
                 >
-                  ✅ Message sent successfully! I'll get back to you soon.
+                  ✅ Message sent successfully! I&apos;ll get back to you soon.
                 </motion.div>
               )}
               {submitStatus === 'error' && (

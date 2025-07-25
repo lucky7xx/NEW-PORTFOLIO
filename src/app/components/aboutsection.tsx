@@ -1,11 +1,10 @@
 // components/AboutSection.js
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import styles from '../styles/AboutSection.module.css';
-import { section } from 'framer-motion/client';
 
 export default function AboutSection() {
   // Animation variants
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -16,29 +15,19 @@ export default function AboutSection() {
     }
   };
 
-  const textVariants = {
+  const textVariants: Variants = {
     hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
         duration: 0.6,
-        ease: "easeOut" // Using named easing instead of cubic-bezier array
+        ease: [0.42, 0, 0.58, 1] // Using cubic-bezier array for easing
       }
     }
   };
 
-  const numberVariants = {
-    hidden: { opacity: 0, scale: 0.8 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: {
-        duration: 0.5,
-        ease: "easeOut"
-      }
-    }
-  };
+
 
   return (
     <section className={styles.aboutSection} id="about">
@@ -79,7 +68,7 @@ export default function AboutSection() {
               </p>
               
               <p>
-                At Silvertouch Technologies, I've successfully bridged the gap between full-stack 
+                At Silvertouch Technologies, I&apos;ve successfully bridged the gap between full-stack 
                 development and AI integration. From building RAG-based applications to implementing 
                 machine learning models in production, I focus on creating AI solutions that deliver 
                 real business value and exceptional user experiences.

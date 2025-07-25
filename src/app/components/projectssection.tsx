@@ -1,7 +1,7 @@
 // components/ProjectsSection.js
 import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import styles from '../styles/ProjectsSection.module.css';
 
 const projects = [
@@ -68,7 +68,7 @@ const projects = [
 ];
 
 export default function ProjectsSection() {
-  const containerVariants = {
+  const containerVariants : Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -79,7 +79,7 @@ export default function ProjectsSection() {
     }
   };
 
-  const cardVariants = {
+  const cardVariants : Variants = {
     hidden: { 
       opacity: 0, 
       y: 50,
@@ -96,7 +96,7 @@ export default function ProjectsSection() {
     }
   };
 
-  const titleVariants = {
+  const titleVariants : Variants = {
     hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,

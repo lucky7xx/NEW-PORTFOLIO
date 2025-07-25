@@ -1,5 +1,5 @@
 // components/SkillsSection.js
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import styles from '../styles/SkillsSection.module.css';
 
 const skillCategories = [
@@ -22,7 +22,7 @@ const skillCategories = [
 ];
 
 export default function SkillsSection() {
-  const containerVariants = {
+  const containerVariants : Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -33,7 +33,7 @@ export default function SkillsSection() {
     }
   };
 
-  const cardVariants = {
+  const cardVariants : Variants = {
     hidden: { 
       opacity: 0, 
       y: 40,
@@ -50,7 +50,7 @@ export default function SkillsSection() {
     }
   };
 
-  const skillTagVariants = {
+  const skillTagVariants : Variants = {
     hidden: { opacity: 0, scale: 0.8 },
     visible: { 
       opacity: 1, 
