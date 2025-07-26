@@ -95,23 +95,56 @@ export default function Portfolio() {
 
   return (
     <>
-      <Head>
-        <title>Lucky - Full Stack Gen AI Developer</title>
-        <meta
-          name="description"
-          content="Lucky - Full Stack Gen AI Developer Portfolio"
-        />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
-          rel="stylesheet"
-        />
-      </Head>
+<Head>
+  <title>Lucky Patel - Full Stack Gen AI Developer | AI Engineer Portfolio India</title>
+  <meta name="description" content="Lucky Patel (luckypatel.in) - Full Stack Gen AI Developer from Ahmedabad, India. Specializing in RAG systems, LLMs, and AI integration with 2.5+ years experience." />
+  <meta name="keywords" content="Lucky Patel, LuckyPatel, Patel Lucky, luckypatel.in, Gen AI Developer India, Full Stack Developer Ahmedabad, AI Engineer Gujarat" />
+  
+  {/* Canonical URL */}
+  <link rel="canonical" href="https://luckypatel.in" />
+  
+  {/* Open Graph */}
+  <meta property="og:title" content="Lucky Patel - Full Stack Gen AI Developer India" />
+  <meta property="og:description" content="Portfolio of Lucky Patel (luckypatel.in) - Gen AI specialist from Ahmedabad, India" />
+  <meta property="og:url" content="https://luckypatel.in" />
+  <meta property="og:image" content="https://luckypatel.in/profile.png" />
+  <meta property="og:site_name" content="Lucky Patel Portfolio" />
+  
+  {/* Enhanced Schema.org for .in domain */}
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Lucky Patel",
+      "alternateName": ["LuckyPatel", "Patel Lucky"],
+      "url": "https://luckypatel.in",
+      "jobTitle": "Full Stack Gen AI Developer",
+      "nationality": "Indian",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Silvertouch Technologies",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "India"
+        }
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Ahmedabad",
+        "addressRegion": "Gujarat", 
+        "addressCountry": "India"
+      },
+      "sameAs": [
+        "https://linkedin.com/in/lucky7x",
+        "https://github.com/lucky7xx"
+      ],
+      "knowsAbout": ["Artificial Intelligence", "Machine Learning", "Full Stack Development", "RAG Systems"],
+      "alumniOf": "Gujarat, India",
+      "email": "lbp7198@gmail.com",
+      "telephone": "+91-9824697672"
+    })}
+  </script>
+</Head>
 
       <div className={styles.container}>
         <motion.header
