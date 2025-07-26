@@ -99,7 +99,11 @@ export default function Portfolio() {
   <title>Lucky Patel - Full Stack Gen AI Developer | AI Engineer Portfolio India</title>
   <meta name="description" content="Lucky Patel (luckypatel.in) - Full Stack Gen AI Developer from Ahmedabad, India. Specializing in RAG systems, LLMs, and AI integration with 2.5+ years experience." />
   <meta name="keywords" content="Lucky Patel, LuckyPatel, Patel Lucky, luckypatel.in, Gen AI Developer India, Full Stack Developer Ahmedabad, AI Engineer Gujarat" />
-  
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png" />
   {/* Canonical URL */}
   <link rel="canonical" href="https://luckypatel.in" />
   
